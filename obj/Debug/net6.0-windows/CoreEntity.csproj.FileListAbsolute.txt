@@ -27,3 +27,4 @@ C:\Users\malik\Desktop\CSharpForms\obj\Debug\net6.0-windows\CoreEntity.pdb
 C:\Users\malik\Desktop\CSharpForms\obj\Debug\net6.0-windows\CoreEntity.genruntimeconfig.cache
 C:\Users\malik\Desktop\CSharpForms\obj\Debug\net6.0-windows\ref\CoreEntity.dll
 C:\Users\malik\Desktop\CSharpForms\obj\Debug\net6.0-windows\CoreEntity.Properties.Resources.resources
+C:\Users\malik\Desktop\CSharpForms\obj\Debug\net6.0-windows\CoreEntity.sourcelink.json
