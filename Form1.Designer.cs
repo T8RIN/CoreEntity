@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             getGroups = new Button();
             addGroup = new Button();
-            listBoxGroups = new ListBox();
+            treeViewGroups = new TreeView();
             deleteGroup = new Button();
             textBoxGroupId = new TextBox();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -117,15 +117,15 @@
             addGroup.UseVisualStyleBackColor = false;
             addGroup.Click += button1_Click;
             // 
-            // listBoxGroups
+            // treeViewGroups
             // 
-            listBoxGroups.FormattingEnabled = true;
-            listBoxGroups.ItemHeight = 20;
-            listBoxGroups.Location = new Point(12, 387);
-            listBoxGroups.Name = "listBoxGroups";
-            listBoxGroups.Size = new Size(389, 224);
-            listBoxGroups.TabIndex = 2;
-            listBoxGroups.SelectedIndexChanged += listGroups_SelectedIndexChanged;
+            //treeViewGroups.FormattingEnabled = true;
+            treeViewGroups.ItemHeight = 20;
+            treeViewGroups.Location = new Point(12, 387);
+            treeViewGroups.Name = "listBoxGroups";
+            treeViewGroups.Size = new Size(389, 224);
+            treeViewGroups.TabIndex = 2;
+            //treeViewGroups.SelectedNo += listGroups_SelectedIndexChanged;
             // 
             // deleteGroup
             // 
@@ -536,7 +536,7 @@
             Controls.Add(getByGroupId);
             Controls.Add(textBoxGroupId);
             Controls.Add(deleteGroup);
-            Controls.Add(listBoxGroups);
+            Controls.Add(treeViewGroups);
             Controls.Add(addGroup);
             Controls.Add(getGroups);
             Controls.Add(pictureBox1);
@@ -564,7 +564,7 @@
 
         private Button getGroups;
         private Button addGroup;
-        private ListBox listBoxGroups;
+        private TreeView treeViewGroups;
         private Button deleteGroup;
         private TextBox textBoxGroupId;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;

@@ -38,4 +38,19 @@ public class TPropertyService {
         context.TProperties.Remove(property);
         context.SaveChanges();
     }
+
+    public List<TProperty> GetPropertiesByGroupId(int groupId) {
+        try {
+            using var context = new DatabaseContext();
+
+            var properties = context.TProperties
+                .Where(p => p.GroupId == groupId)
+                .ToList();
+
+            return properties;
+        }
+        catch (Exception) {
+            return new List<TProperty>();
+        }
+    }
 }

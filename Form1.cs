@@ -59,16 +59,26 @@ public partial class Form1 : Form {
     private void get_groups_Click(object sender, EventArgs e) {
         try {
             var groupService = new TGroupService();
+            var propertyService = new TPropertyService();
 
             var searchQuery = textBoxSearch.Text.Trim();
 
             var groups = groupService.GetAllGroups(searchQuery);
 
-
-            listBoxGroups.Items.Clear();
+            treeViewGroups.Nodes.Clear();
 
             foreach (var group in groups) {
-                listBoxGroups.Items.Add(group.ToString());
+                var groupNode = new TreeNode($"Группа: {group.Name}, ID: {group.Id}");
+                var properties = propertyService.GetPropertiesByGroupId(group.Id);
+
+                foreach (var propertyNode in properties
+                             .Select(property =>
+                                 $"Свойство: {property.Name}, Значение: {property.Value}, ID: {property.Id}")
+                             .Select(propertyText => new TreeNode(propertyText))) {
+                    groupNode.Nodes.Add(propertyNode);
+                }
+
+                treeViewGroups.Nodes.Add(groupNode);
             }
 
             MessageBox.Show(groups.Count == 0 ? "Группы не найдены" : "Группы загружены");
@@ -120,12 +130,12 @@ public partial class Form1 : Form {
 
     private void updateGroup_Click(object sender, EventArgs e) {
         try {
-            if (listBoxGroups.SelectedItem == null) {
+            if (treeViewGroups.SelectedNode == null) {
                 ShowWarning("Выберите группу для обновления");
                 return;
             }
 
-            var selectedItem = listBoxGroups.SelectedItem.ToString()!;
+            var selectedItem = treeViewGroups.SelectedNode.ToString()!;
 
             var idStartIndex = selectedItem.IndexOf("ID: ", StringComparison.Ordinal) + 4;
             var idEndIndex = selectedItem.IndexOf(',', idStartIndex);
@@ -165,8 +175,8 @@ public partial class Form1 : Form {
 
     private void deleteGroupButton_Click(object sender, EventArgs e) {
         try {
-            if (listBoxGroups.SelectedItem != null) {
-                var selectedText = listBoxGroups.SelectedItem.ToString();
+            if (treeViewGroups.SelectedNode != null) {
+                var selectedText = treeViewGroups.SelectedNode.ToString();
 
                 if (selectedText == null) return;
 
@@ -198,8 +208,8 @@ public partial class Form1 : Form {
 
 
     private void listGroups_SelectedIndexChanged(object sender, EventArgs e) {
-        if (listBoxGroups.SelectedItem != null) {
-            ShowInfo($"Вы выбрали: {listBoxGroups.SelectedItem}");
+        if (treeViewGroups.SelectedNode != null) {
+            ShowInfo($"Вы выбрали: {treeViewGroups.SelectedNode}");
         }
     }
 
@@ -231,7 +241,7 @@ public partial class Form1 : Form {
                 return;
             }
 
-            var selectedText = listBoxGroups.SelectedItem.ToString()!;
+            var selectedText = treeViewGroups.SelectedNode.ToString()!;
 
             var idStartIndex = selectedText.IndexOf("ID: ", StringComparison.Ordinal) + 4;
             var idEndIndex = selectedText.IndexOf(",", idStartIndex, StringComparison.Ordinal);
@@ -352,7 +362,7 @@ public partial class Form1 : Form {
         try {
             var propertyService = new TPropertyService();
 
-            var selectedText = listBoxGroups.SelectedItem.ToString()!;
+            var selectedText = treeViewGroups.SelectedNode.ToString()!;
 
             var idStartIndex = selectedText.IndexOf("ID: ", StringComparison.Ordinal) + 4;
             var idEndIndex = selectedText.IndexOf(",", idStartIndex, StringComparison.Ordinal);
