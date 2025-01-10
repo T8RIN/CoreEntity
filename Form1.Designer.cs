@@ -67,6 +67,24 @@
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            quitToolStripMenuItem = new ToolStripMenuItem();
+            addToolStripMenuItem = new ToolStripMenuItem();
+            newGroupToolStripMenuItem = new ToolStripMenuItem();
+            newPropertyToolStripMenuItem = new ToolStripMenuItem();
+            newRelationToolStripMenuItem = new ToolStripMenuItem();
+            editToolStripMenuItem = new ToolStripMenuItem();
+            groupToolStripMenuItem = new ToolStripMenuItem();
+            propertyToolStripMenuItem = new ToolStripMenuItem();
+            relationToolStripMenuItem1 = new ToolStripMenuItem();
+            deleteToolStripMenuItem = new ToolStripMenuItem();
+            groupToolStripMenuItem1 = new ToolStripMenuItem();
+            propertyToolStripMenuItem1 = new ToolStripMenuItem();
+            relationToolStripMenuItem = new ToolStripMenuItem();
+            databaseToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            hideActionsToolStripMenuItem = new ToolStripMenuItem();
             label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -74,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label5
@@ -81,7 +100,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Indigo;
             label5.ForeColor = Color.White;
-            label5.Location = new Point(19, 94);
+            label5.Location = new Point(19, 93);
             label5.Name = "label5";
             label5.Size = new Size(42, 20);
             label5.TabIndex = 20;
@@ -109,9 +128,9 @@
             addGroup.FlatStyle = FlatStyle.Flat;
             addGroup.ForeColor = Color.Black;
             addGroup.Image = (Image)resources.GetObject("addGroup.Image");
-            addGroup.Location = new Point(276, 221);
+            addGroup.Location = new Point(277, 201);
             addGroup.Name = "addGroup";
-            addGroup.Size = new Size(125, 73);
+            addGroup.Size = new Size(125, 83);
             addGroup.TabIndex = 1;
             addGroup.Text = "Добавить группу";
             addGroup.UseVisualStyleBackColor = false;
@@ -119,13 +138,11 @@
             // 
             // treeViewGroups
             // 
-            //treeViewGroups.FormattingEnabled = true;
             treeViewGroups.ItemHeight = 20;
-            treeViewGroups.Location = new Point(12, 387);
-            treeViewGroups.Name = "listBoxGroups";
-            treeViewGroups.Size = new Size(389, 224);
+            treeViewGroups.Location = new Point(27, 387);
+            treeViewGroups.Name = "treeViewGroups";
+            treeViewGroups.Size = new Size(373, 224);
             treeViewGroups.TabIndex = 2;
-            //treeViewGroups.SelectedNo += listGroups_SelectedIndexChanged;
             // 
             // deleteGroup
             // 
@@ -134,7 +151,7 @@
             deleteGroup.FlatStyle = FlatStyle.Flat;
             deleteGroup.ForeColor = Color.Black;
             deleteGroup.Image = (Image)resources.GetObject("deleteGroup.Image");
-            deleteGroup.Location = new Point(28, 626);
+            deleteGroup.Location = new Point(27, 627);
             deleteGroup.Name = "deleteGroup";
             deleteGroup.Size = new Size(368, 79);
             deleteGroup.TabIndex = 3;
@@ -158,7 +175,7 @@
             getByGroupId.Image = (Image)resources.GetObject("getByGroupId.Image");
             getByGroupId.Location = new Point(209, 29);
             getByGroupId.Name = "getByGroupId";
-            getByGroupId.Size = new Size(192, 62);
+            getByGroupId.Size = new Size(192, 61);
             getByGroupId.TabIndex = 7;
             getByGroupId.Text = "Получить группы по ID";
             getByGroupId.UseVisualStyleBackColor = false;
@@ -231,9 +248,9 @@
             addRelation.FlatStyle = FlatStyle.Flat;
             addRelation.ForeColor = Color.Black;
             addRelation.Image = (Image)resources.GetObject("addRelation.Image");
-            addRelation.Location = new Point(518, 237);
+            addRelation.Location = new Point(518, 233);
             addRelation.Name = "addRelation";
-            addRelation.Size = new Size(183, 63);
+            addRelation.Size = new Size(183, 67);
             addRelation.TabIndex = 14;
             addRelation.Text = "Добавить связь с выбранной группой";
             addRelation.UseVisualStyleBackColor = false;
@@ -264,7 +281,7 @@
             deleteRelation.FlatStyle = FlatStyle.Flat;
             deleteRelation.ForeColor = Color.Black;
             deleteRelation.Image = (Image)resources.GetObject("deleteRelation.Image");
-            deleteRelation.Location = new Point(518, 626);
+            deleteRelation.Location = new Point(518, 627);
             deleteRelation.Name = "deleteRelation";
             deleteRelation.Size = new Size(366, 79);
             deleteRelation.TabIndex = 17;
@@ -280,9 +297,9 @@
             dropDataBase.Font = new Font("Constantia", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             dropDataBase.ForeColor = Color.Black;
             dropDataBase.Image = (Image)resources.GetObject("dropDataBase.Image");
-            dropDataBase.Location = new Point(1356, 8);
+            dropDataBase.Location = new Point(1359, 33);
             dropDataBase.Name = "dropDataBase";
-            dropDataBase.Size = new Size(115, 125);
+            dropDataBase.Size = new Size(102, 227);
             dropDataBase.TabIndex = 18;
             dropDataBase.Text = "Удалить базу данных";
             dropDataBase.UseVisualStyleBackColor = false;
@@ -293,7 +310,7 @@
             getGroupsIdLabel.AutoSize = true;
             getGroupsIdLabel.BackColor = Color.Indigo;
             getGroupsIdLabel.ForeColor = Color.White;
-            getGroupsIdLabel.Location = new Point(212, 97);
+            getGroupsIdLabel.Location = new Point(213, 97);
             getGroupsIdLabel.Name = "getGroupsIdLabel";
             getGroupsIdLabel.Size = new Size(27, 20);
             getGroupsIdLabel.TabIndex = 19;
@@ -301,9 +318,9 @@
             // 
             // textBoxSearch
             // 
-            textBoxSearch.Location = new Point(67, 94);
+            textBoxSearch.Location = new Point(67, 93);
             textBoxSearch.Name = "textBoxSearch";
-            textBoxSearch.Size = new Size(136, 27);
+            textBoxSearch.Size = new Size(137, 27);
             textBoxSearch.TabIndex = 21;
             // 
             // listBoxProperties
@@ -343,7 +360,7 @@
             // 
             // properyNameTextBox
             // 
-            properyNameTextBox.Location = new Point(1058, 198);
+            properyNameTextBox.Location = new Point(1058, 197);
             properyNameTextBox.Name = "properyNameTextBox";
             properyNameTextBox.Size = new Size(148, 27);
             properyNameTextBox.TabIndex = 26;
@@ -403,9 +420,9 @@
             updateGroup.FlatStyle = FlatStyle.Flat;
             updateGroup.ForeColor = Color.Black;
             updateGroup.Image = (Image)resources.GetObject("updateGroup.Image");
-            updateGroup.Location = new Point(276, 300);
+            updateGroup.Location = new Point(277, 289);
             updateGroup.Name = "updateGroup";
-            updateGroup.Size = new Size(125, 81);
+            updateGroup.Size = new Size(125, 92);
             updateGroup.TabIndex = 31;
             updateGroup.Text = "Обновить выбранную группу";
             updateGroup.UseVisualStyleBackColor = false;
@@ -418,9 +435,9 @@
             updateRelation.FlatStyle = FlatStyle.Flat;
             updateRelation.ForeColor = Color.Black;
             updateRelation.Image = (Image)resources.GetObject("updateRelation.Image");
-            updateRelation.Location = new Point(707, 237);
+            updateRelation.Location = new Point(707, 233);
             updateRelation.Name = "updateRelation";
-            updateRelation.Size = new Size(177, 64);
+            updateRelation.Size = new Size(177, 68);
             updateRelation.TabIndex = 32;
             updateRelation.Text = "Обновить связь с выбранной группой";
             updateRelation.UseVisualStyleBackColor = false;
@@ -475,7 +492,7 @@
             // 
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(750, -206);
+            pictureBox4.Location = new Point(750, -205);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(302, 1075);
             pictureBox4.TabIndex = 37;
@@ -500,6 +517,134 @@
             pictureBox6.Size = new Size(302, 1075);
             pictureBox6.TabIndex = 39;
             pictureBox6.TabStop = false;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, addToolStripMenuItem, editToolStripMenuItem, deleteToolStripMenuItem, toolStripMenuItem1, hideActionsToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(6, 3, 0, 3);
+            menuStrip1.Size = new Size(1473, 30);
+            menuStrip1.TabIndex = 41;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { quitToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(59, 24);
+            fileToolStripMenuItem.Text = "Файл";
+            // 
+            // quitToolStripMenuItem
+            // 
+            quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            quitToolStripMenuItem.Size = new Size(251, 26);
+            quitToolStripMenuItem.Text = "Завершить программу";
+            quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
+            // 
+            // addToolStripMenuItem
+            // 
+            addToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newGroupToolStripMenuItem, newPropertyToolStripMenuItem, newRelationToolStripMenuItem });
+            addToolStripMenuItem.Name = "addToolStripMenuItem";
+            addToolStripMenuItem.Size = new Size(90, 24);
+            addToolStripMenuItem.Text = "Добавить";
+            // 
+            // newGroupToolStripMenuItem
+            // 
+            newGroupToolStripMenuItem.Name = "newGroupToolStripMenuItem";
+            newGroupToolStripMenuItem.Size = new Size(157, 26);
+            newGroupToolStripMenuItem.Text = "Группу";
+            newGroupToolStripMenuItem.Click += newGroupToolStripMenuItem_Click;
+            // 
+            // newPropertyToolStripMenuItem
+            // 
+            newPropertyToolStripMenuItem.Name = "newPropertyToolStripMenuItem";
+            newPropertyToolStripMenuItem.Size = new Size(157, 26);
+            newPropertyToolStripMenuItem.Text = "Свойство";
+            newPropertyToolStripMenuItem.Click += newPropertyToolStripMenuItem_Click;
+            // 
+            // newRelationToolStripMenuItem
+            // 
+            newRelationToolStripMenuItem.Name = "newRelationToolStripMenuItem";
+            newRelationToolStripMenuItem.Size = new Size(157, 26);
+            newRelationToolStripMenuItem.Text = "Связь";
+            newRelationToolStripMenuItem.Click += newRelationToolStripMenuItem_Click;
+            // 
+            // editToolStripMenuItem
+            // 
+            editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { groupToolStripMenuItem, propertyToolStripMenuItem, relationToolStripMenuItem1 });
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            editToolStripMenuItem.Size = new Size(125, 24);
+            editToolStripMenuItem.Text = "Редактировать";
+            // 
+            // groupToolStripMenuItem
+            // 
+            groupToolStripMenuItem.Name = "groupToolStripMenuItem";
+            groupToolStripMenuItem.Size = new Size(157, 26);
+            groupToolStripMenuItem.Text = "Группу";
+            groupToolStripMenuItem.Click += groupToolStripMenuItem_Click;
+            // 
+            // propertyToolStripMenuItem
+            // 
+            propertyToolStripMenuItem.Name = "propertyToolStripMenuItem";
+            propertyToolStripMenuItem.Size = new Size(157, 26);
+            propertyToolStripMenuItem.Text = "Свойство";
+            propertyToolStripMenuItem.Click += propertyToolStripMenuItem_Click;
+            // 
+            // relationToolStripMenuItem1
+            // 
+            relationToolStripMenuItem1.Name = "relationToolStripMenuItem1";
+            relationToolStripMenuItem1.Size = new Size(157, 26);
+            relationToolStripMenuItem1.Text = "Связь";
+            relationToolStripMenuItem1.Click += relationToolStripMenuItem1_Click;
+            // 
+            // deleteToolStripMenuItem
+            // 
+            deleteToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { groupToolStripMenuItem1, propertyToolStripMenuItem1, relationToolStripMenuItem, databaseToolStripMenuItem });
+            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            deleteToolStripMenuItem.Size = new Size(79, 24);
+            deleteToolStripMenuItem.Text = "Удалить";
+            // 
+            // groupToolStripMenuItem1
+            // 
+            groupToolStripMenuItem1.Name = "groupToolStripMenuItem1";
+            groupToolStripMenuItem1.Size = new Size(195, 26);
+            groupToolStripMenuItem1.Text = "Группу";
+            groupToolStripMenuItem1.Click += groupToolStripMenuItem1_Click;
+            // 
+            // propertyToolStripMenuItem1
+            // 
+            propertyToolStripMenuItem1.Name = "propertyToolStripMenuItem1";
+            propertyToolStripMenuItem1.Size = new Size(195, 26);
+            propertyToolStripMenuItem1.Text = "Свойство";
+            propertyToolStripMenuItem1.Click += propertyToolStripMenuItem1_Click;
+            // 
+            // relationToolStripMenuItem
+            // 
+            relationToolStripMenuItem.Name = "relationToolStripMenuItem";
+            relationToolStripMenuItem.Size = new Size(195, 26);
+            relationToolStripMenuItem.Text = "Связь";
+            relationToolStripMenuItem.Click += relationToolStripMenuItem_Click;
+            // 
+            // databaseToolStripMenuItem
+            // 
+            databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
+            databaseToolStripMenuItem.Size = new Size(195, 26);
+            databaseToolStripMenuItem.Text = "БАЗУ ДАННЫХ";
+            databaseToolStripMenuItem.Click += databaseToolStripMenuItem_Click;
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(14, 24);
+            // 
+            // hideActionsToolStripMenuItem
+            // 
+            hideActionsToolStripMenuItem.Name = "hideActionsToolStripMenuItem";
+            hideActionsToolStripMenuItem.Size = new Size(167, 24);
+            hideActionsToolStripMenuItem.Text = "Скрыть все действия";
+            hideActionsToolStripMenuItem.Click += hideActionsToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -539,13 +684,15 @@
             Controls.Add(treeViewGroups);
             Controls.Add(addGroup);
             Controls.Add(getGroups);
-            Controls.Add(pictureBox1);
+            Controls.Add(menuStrip1);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox6);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Система групп и связей";
@@ -555,6 +702,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -599,5 +748,23 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem quitToolStripMenuItem;
+        private ToolStripMenuItem addToolStripMenuItem;
+        private ToolStripMenuItem editToolStripMenuItem;
+        private ToolStripMenuItem deleteToolStripMenuItem;
+        private ToolStripMenuItem newGroupToolStripMenuItem;
+        private ToolStripMenuItem newPropertyToolStripMenuItem;
+        private ToolStripMenuItem newRelationToolStripMenuItem;
+        private ToolStripMenuItem groupToolStripMenuItem;
+        private ToolStripMenuItem propertyToolStripMenuItem;
+        private ToolStripMenuItem groupToolStripMenuItem1;
+        private ToolStripMenuItem propertyToolStripMenuItem1;
+        private ToolStripMenuItem relationToolStripMenuItem;
+        private ToolStripMenuItem relationToolStripMenuItem1;
+        private ToolStripMenuItem databaseToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem hideActionsToolStripMenuItem;
     }
 }
